@@ -27,7 +27,7 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: const Text('BMI CALCULATOR'),
       ),
       body: Column(
         //prevent the container to fit to content and to stretch the whoel screen.
@@ -80,7 +80,7 @@ class _InputPageState extends State<InputPage> {
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'HEIGHT',
                     style: kLabelTextStyle,
                   ),
@@ -96,7 +96,7 @@ class _InputPageState extends State<InputPage> {
                         height.toString(),
                         style: kNumberStyle,
                       ),
-                      Text(
+                      const Text(
                         'CM',
                         style: kLabelTextStyle,
                       ),
@@ -104,14 +104,14 @@ class _InputPageState extends State<InputPage> {
                   ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
-                      inactiveTrackColor: Color(0xFF8D8E98),
+                      inactiveTrackColor: const Color(0xFF8D8E98),
                       activeTrackColor: Colors.white,
-                      overlayColor: Color(0x29EB1555),
-                      thumbColor: Color(0xFFEB1555),
+                      overlayColor: const Color(0x29EB1555),
+                      thumbColor: const Color(0xFFEB1555),
                       thumbShape:
-                          RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                          const RoundSliderThumbShape(enabledThumbRadius: 15.0),
                       overlayShape:
-                          RoundSliderOverlayShape(overlayRadius: 30.0),
+                          const RoundSliderOverlayShape(overlayRadius: 30.0),
                     ),
                     child: Slider(
                         value: height.toDouble(),
@@ -138,7 +138,7 @@ class _InputPageState extends State<InputPage> {
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'Weight',
                           style: kLabelTextStyle,
                         ),
@@ -156,7 +156,7 @@ class _InputPageState extends State<InputPage> {
                                     weight++;
                                   });
                                 }),
-                            SizedBox(
+                            const SizedBox(
                               width: 15.0,
                             ),
                             RoundIconButton(
@@ -178,7 +178,7 @@ class _InputPageState extends State<InputPage> {
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'age',
                           style: kLabelTextStyle,
                         ),
@@ -196,7 +196,7 @@ class _InputPageState extends State<InputPage> {
                                     age++;
                                   });
                                 }),
-                            SizedBox(
+                            const SizedBox(
                               width: 15.0,
                             ),
                             RoundIconButton(
@@ -251,15 +251,15 @@ class RoundIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
-      child: Icon(icon),
-      shape: CircleBorder(),
+      shape: const CircleBorder(),
       onPressed: function,
-      fillColor: Color(0XFF4C4F5E),
+      fillColor: const Color(0XFF4C4F5E),
       elevation: 6.0,
-      constraints: BoxConstraints.tightFor(
+      constraints: const BoxConstraints.tightFor(
         width: 56.0,
         height: 56.0,
       ),
+      child: Icon(icon),
     );
   }
 }
